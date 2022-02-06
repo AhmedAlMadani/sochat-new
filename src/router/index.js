@@ -32,7 +32,7 @@ router.beforeEach(async(to, from, next)=>{
         if(await getCurrentUser()){
             next();
         }else {
-            alert("You do not have any access!");
+            console.log("You do not have any access!");
             next("/login");
         }
     } else{
